@@ -12,7 +12,7 @@ from langchain_core.messages import HumanMessage, SystemMessage
 
 messages = [
     SystemMessage("Translate the following from English into Italian"),
-    HumanMessage("hi!"),
+    HumanMessage("Hi!"),
 ]
 
 # response = model.invoke(messages)
@@ -30,7 +30,7 @@ prompt_template = ChatPromptTemplate.from_messages(
     [("system", system_template), ("user", "{text}")] # 동적 입력 대상 변수
 )
 
-prompt = prompt_template.invoke({"language": "Italian", "text": "hi!"})
+prompt = prompt_template.invoke({"language": "Korean", "text": "hi!"})
 
 # print(prompt)
 
